@@ -19,7 +19,7 @@
             string content = File.ReadAllText("example.txt");
             Console.WriteLine(content);
 
-            File.Move("example.txt", "newDirectory/example.txt");
+            //File.Move("example.txt", "newDirectory/example.txt");
             File.Copy("example.txt", "example_copy.txt");
 
             File.Delete("example.txt");

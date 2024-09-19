@@ -11,7 +11,7 @@
 
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string filePath = Path.Combine(desktopPath, "example.txt");
-
+            Console.WriteLine($"DirectorySeparatorChar: {Path.DirectorySeparatorChar}");
             Console.WriteLine($"File Path: {filePath}");
 
             filePath = @"C:\Users\User\Documents\example.txt";

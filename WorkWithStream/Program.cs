@@ -6,7 +6,7 @@ namespace WorkWithStream
     {
         static void Main(string[] args)
         {
-            using (FileStream fs = new FileStream("data.txt", FileMode.Create))
+            using (FileStream fs = new FileStream("data.txt", FileMode.OpenOrCreate))
             {
                 byte[] data = new UTF8Encoding(true).GetBytes("Hello, Stream!");
                 fs.Write(data, 0, data.Length);
@@ -22,6 +22,7 @@ namespace WorkWithStream
 
             using (StreamWriter writer = new StreamWriter("example.txt"))
             {
+                writer.WriteLine("This is a text file.");
                 writer.WriteLine("This is a text file.");
             }
 
